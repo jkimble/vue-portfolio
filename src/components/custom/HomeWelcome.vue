@@ -17,9 +17,7 @@ defineProps({
         <div class="text-contain">
             <p>
                 I am a web/web app developer specializing in developing custom websites
-                and themes with a broad range of CMS knowledge. I prioritize designing and developing websites
-                that are not only visually appealing but also highly functional, optimized,
-                and easy-to-use for all clients, experienced or not!
+                and themes with a broad range of CMS knowledge.
             </p>
             <p class="cta_intro">{{ ctaintro }}</p>
         </div>
@@ -34,5 +32,12 @@ defineProps({
     font-size: 30px;
     line-height: 45px;
     font-weight: 600;
+    color: var(--theme-icon-color);
+}
+
+.home__content .text-contain p:last-child {
+  margin-top: 1.5rem;
+  color: var(--theme-icon-color);
+  font-size: 20px;
 }
 </style>

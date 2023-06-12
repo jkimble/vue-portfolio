@@ -19,6 +19,17 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --portfolio-yellow-dark: #ffba00;
+  --portfolio-hightlight-dark: #ffbb0073;
+  --portfolio-boxborder-dark: #ffba00;
+
+  --portfolio-yellow-light: #916900;
+  --portfolio-boxborder-light: #916900;
+
+  --portfolio-white: #fff;
+  --portfolio-black: #101011;
+  
 }
 
 /* semantic color variables for this project */
@@ -32,6 +43,13 @@
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
+
+  --theme-yellow: var(--portfolio-yellow-light);
+  --theme-hightlight: var(--portfolio-hightlight-dark);
+  --theme-boxborder: var(--portfolio-boxborder-light);
+
+  --theme-icon-color: var(--portfolio-black);
+
 
   --section-gap: 160px;
 }
@@ -47,6 +65,12 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --theme-yellow: var(--portfolio-yellow-dark);
+    --theme-hightlight: var(--portfolio-hightlight-dark);
+    --theme-boxborder: var(--portfolio-boxborder-dark);
+
+    --theme-icon-color: var(--portfolio-white);
   }
 }
 
@@ -55,7 +79,6 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
 }
 
 body {

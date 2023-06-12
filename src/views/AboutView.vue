@@ -1,6 +1,11 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>About Me</h1>
+    <p>
+      I prioritize designing and developing websites
+      that are not only visually appealing but also highly functional, optimized,
+      and easy-to-use for all clients, experienced or not!
+    </p>
   </div>
 </template>
 

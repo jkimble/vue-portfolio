@@ -6,15 +6,14 @@ import HomeSidebar from './components/HomeSidebar.Vue';
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/images/namelogo-wh-trimc.png" width="450" height="100" />
-
+    <h1 class="textlogo">Justin <span>Kimble</span></h1>
     <div class="wrapper">
-      <HomeSidebar msg="Welcome to my hub!" />
+      <HomeSidebar msg="Developer" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/">Education</RouterLink>
+        <RouterLink to="/experience">Experience</RouterLink>
         <RouterLink to="/">Clients</RouterLink>
       </nav>
     </div>
@@ -34,6 +33,19 @@ header {
   margin: 0 auto 2rem;
   height: auto;
   max-width: 100%;
+}
+
+.textlogo {
+  color: var(--theme-icon-color);
+  font-size: 50px;
+  letter-spacing: 4.06px;
+  text-transform: uppercase;
+}
+
+.textlogo span {
+  background: var(--theme-yellow);
+  padding: 5px;
+  color: var(--color-background) !important;
 }
 
 nav {

@@ -154,16 +154,27 @@ h6 {
 }
 .iconwrap i {
   font-family: 'FontAwesome';
+  color: var(--theme-icon-color);
+  font-size: 30px;
+  font-style: normal;
+}
+.social-wrap .social-content p {
+  color: var(--theme-yellow);
+  transition: 0.4s;
+}
+.social-wrap:hover .social-content p,
+.social-wrap:focus .social-content p {
+  color: var(--color-heading);
 }
 a,
 .yellow {
   text-decoration: none;
-  color: #ffba00;
+  color: var(--theme-yellow);
   transition: 0.4s;
 }
 @media (hover: hover) {
   a:hover {
-    background-color: #ffbb0073;
+    background-color: var(--theme-hightlight);
   }
 }
 @media (min-width: 1024px) {
