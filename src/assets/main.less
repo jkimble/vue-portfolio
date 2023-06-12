@@ -1,0 +1,51 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: .5rem;
+    letter-spacing: 1.15px;
+}
+
+.container-fluid {
+    &.homepage {
+        padding: 2rem 0;
+    }
+}
+
+.iconwrap i {
+    font-family: 'FontAwesome';
+}
+
+a,
+.yellow {
+  text-decoration: none;
+  color: #ffba00;
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: #ffbb0073;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: flex;
+    padding: 0 2rem;
+  }
+}
