@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HomeSidebar from './components/HomeSidebar.Vue';
 import SocialSidebar from './components/custom/SocialSidebar.vue';
 
 </script>
@@ -60,6 +59,7 @@ header {
   padding: 1.5rem 2rem;
   background:var(--theme-lightgray);
   box-shadow: 0 3px 6px #0d0d1d42;
+  z-index: 10;
 }
 
 .side__social {
