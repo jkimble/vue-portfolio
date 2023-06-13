@@ -1,62 +1,123 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HomeSidebar from './components/HomeSidebar.Vue';
+import SocialSidebar from './components/custom/SocialSidebar.vue';
 
 </script>
 
 <template>
   <header>
-    <h1 class="textlogo">Justin <span>Kimble</span></h1>
-    <div class="wrapper">
-      <HomeSidebar msg="Developer" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/experience">Experience</RouterLink>
-        <RouterLink to="/">Clients</RouterLink>
-      </nav>
+    <div class="header_wrap">
+      <h2 class="textlogo">Justin <span>Kimble</span></h2>
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/experience">Experience</RouterLink>
+          <RouterLink to="/">Clients</RouterLink>
+        </nav>
+      </div>
     </div>
   </header>
+  <div class="side__social">
+    <SocialSidebar soc_link="https://github.com/jkimble">
+      <template #soc_icon>
+        <i class="fa-brands fa-github"></i>
+      </template>
+    </SocialSidebar>
 
+    <SocialSidebar soc_link="https://www.linkedin.com/in/justin-kimble-890429180/">
+      <template #soc_icon>
+        <i class="fa-brands fa-linkedin"></i>
+      </template>
+    </SocialSidebar>
+
+    <SocialSidebar soc_link="mailto:jkimble.dev@gmail.com">
+      <template #soc_icon>
+        <i class="fa-regular fa-envelope"></i>
+      </template>
+    </SocialSidebar>
+  </div>
+<Transition>
   <RouterView />
+</Transition>
 </template>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: 0.5s;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transition: 0.5s;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
+  padding: 1.5rem 2rem;
+  background:var(--theme-lightgray);
+  box-shadow: 0 3px 6px #0d0d1d42;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-  height: auto;
-  max-width: 100%;
+.side__social {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateY(-90%) translateX(-50%);
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 7px;
+  box-shadow: 0 3px 6px #0d0d1d42;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background-soft);
+}
+
+.side__social a {
+    padding: 0 10px;
+  }
+
+.side__social a i {
+  transition: 0.4s;
+  color: var(--theme-icon-color);
+}
+
+.side__social a:hover,
+.side__social a:focus {
+  background: transparent;
+}
+
+.side__social a:hover i,
+.side__social a:focus i {
+  color: var(--portfolio-blue);
 }
 
 .textlogo {
-  color: var(--theme-icon-color);
-  font-size: 50px;
+  color: var(--color-text-header);
+  font-size: 30px;
   letter-spacing: 4.06px;
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .textlogo span {
-  background: var(--theme-yellow);
+  background: var(--portfolio-blue);
   padding: 5px;
-  color: var(--color-background) !important;
+  color: var(--portfolio-white);
 }
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: var(--color-text-header);
 }
 
 nav a.router-link-exact-active:hover {
@@ -67,26 +128,43 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+  font-weight: bold;
 }
 
 nav a:first-of-type {
   border: 0;
 }
 
+@media (min-width: 1090px) {
+  .side__social {
+    top: 45%;
+    transform: translateY(-45%);
+    left: 2rem;
+    flex-flow: column;
+  }
+
+  .side__social a {
+    padding: 0;
+  }
+}
+
 @media (min-width: 1024px) {
   header {
     display: flex;
-    flex-flow: column;
-    flex: 1 0 50%;
-    justify-content: center;
-    place-items: start;
-    padding-right: calc(var(--section-gap) / 2);
+    flex-flow: row;
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
-  .logo {
-    margin: 0 0 2rem;
+  header .header_wrap {
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
   }
-
   header .wrapper {
     display: flex;
     place-items: flex-start;
@@ -95,11 +173,12 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
+  }
 
-    padding: 1rem 0;
-    margin-top: 1rem;
+  .textlogo {
+    text-align: left;
+    margin: 0;
   }
 }
 </style>
