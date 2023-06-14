@@ -21,6 +21,10 @@ defineProps({
 </template>
 
 <style scoped>
+    .hero {
+        background: var(--color-background-soft);
+        padding: 3rem 2rem;
+    }
     .hero h1 {
         font-size: 65px;
         line-height: 78px;

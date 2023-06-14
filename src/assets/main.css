@@ -142,14 +142,14 @@
 html {
   max-width: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #app main:not(.innerpage) {
   padding: 2rem;
   margin-top: 5rem;
 }
 #app main.innerpage {
-  padding: 3rem 2rem;
+  padding: 0;
 }
 h1,
 h2,
