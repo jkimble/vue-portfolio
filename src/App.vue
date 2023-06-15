@@ -40,6 +40,34 @@ import SocialSidebar from './components/custom/SocialSidebar.vue';
 <Transition>
   <RouterView />
 </Transition>
+  <footer class="container-fluid footer">
+    <div class="row footer-row">
+      <div class="col-xs-12 center-xs copy">
+        Justin Kimble {{ new Date().getFullYear() }}
+      </div>
+      <div class="col-xs-12 center-xs social-footer">
+        <div class="social-footer-wrap">
+          <SocialSidebar soc_link="https://github.com/jkimble">
+            <template #soc_icon>
+              <i class="fa-brands fa-github"></i>
+            </template>
+          </SocialSidebar>
+
+          <SocialSidebar soc_link="https://www.linkedin.com/in/justin-kimble-890429180/">
+            <template #soc_icon>
+              <i class="fa-brands fa-linkedin"></i>
+            </template>
+          </SocialSidebar>
+
+          <SocialSidebar soc_link="mailto:jkimble.dev@gmail.com">
+            <template #soc_icon>
+              <i class="fa-regular fa-envelope"></i>
+            </template>
+          </SocialSidebar>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -62,6 +90,22 @@ header {
   z-index: 10;
 }
 
+footer {
+  padding: 2rem 2rem 1rem;
+}
+.social-footer-wrap {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  border-radius: 7px;
+  box-shadow: 0 3px 6px #0d0d1d42;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background-soft);
+  max-width: 175px;
+  margin: 1rem auto 0;
+}
+
 .side__social {
   position: absolute;
   top: 90%;
@@ -76,22 +120,28 @@ header {
   background: var(--color-background-soft);
 }
 
-.side__social a {
+.side__social ,
+.social-footer-wrap a {
     padding: 0 10px;
   }
 
-.side__social a i {
+.side__social a i,
+.social-footer-wrap a i {
   transition: 0.4s;
   color: var(--theme-icon-color);
 }
 
 .side__social a:hover,
-.side__social a:focus {
+.side__social a:focus,
+.social-footer-wrap a:hover,
+.social-footer-wrap a:focus {
   background: transparent;
 }
 
 .side__social a:hover i,
-.side__social a:focus i {
+.side__social a:focus i,
+.social-footer-wrap a:hover i,
+.social-footer-wrap a:focus i {
   color: var(--portfolio-blue);
 }
 
@@ -179,6 +229,16 @@ nav a:first-of-type {
   .textlogo {
     text-align: left;
     margin: 0;
+  }
+
+  .social-footer {
+    display: none;
+  }
+}
+
+@media (max-width: 1025px) {
+  .side__social {
+    display: none;
   }
 }
 </style>

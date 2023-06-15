@@ -9,6 +9,10 @@ defineProps({
   skill_list_head: {
     type: String,
     required: true
+  },
+  funfact_head: {
+    type: String,
+    required: true
   }
 })
 const skills = ref([
@@ -33,7 +37,7 @@ const skills = ref([
 <template>
     <div class="container-fluid about-content-wrap">
         <div class="row">
-            <div class="col-sm-12 col-xs-12 center-xs heading-col">
+            <div class="col-sm-12 col-xs-12 heading-col">
                 <h2>{{ about_head }}</h2>
                 <div class="content-contain">
                     <slot name="about_content"></slot>
@@ -47,7 +51,8 @@ const skills = ref([
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 spec-grid">
+            <div class="col-md-6 col-sm-12 col-xs-12 fact-slider">
+                <h3>{{ funfact_head }}</h3>
                 <AboutSlider></AboutSlider>
             </div>
         </div>
@@ -85,9 +90,8 @@ const skills = ref([
         vertical-align: center;
     }
 
-    .spec-grid {
+    .fact-slider {
         display: flex;
         flex-flow: column;
-        justify-content: center;
     }
 </style>
