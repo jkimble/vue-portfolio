@@ -1,11 +1,16 @@
 <script setup>
 import { ref } from 'vue'
+import AboutSlider from './AboutSlider.vue';
 defineProps({
     about_head: {
     type: String,
     required: true
   },
   skill_list_head: {
+    type: String,
+    required: true
+  },
+  funfact_head: {
     type: String,
     required: true
   }
@@ -17,7 +22,7 @@ const skills = ref([
         {skill: 'Bootstrap'},
         {skill: 'Responsive Design'},
         {skill: 'Accessible Design'},
-        {skill: 'Object-Oriented Approach'},
+        {skill: 'Object-Oriented'},
         {skill: 'Javascript'},
         {skill: 'JSON'},
         {skill: 'Vue.js'},
@@ -32,13 +37,13 @@ const skills = ref([
 <template>
     <div class="container-fluid about-content-wrap">
         <div class="row">
-            <div class="col-sm-12 col-xs-12 center-xs text-col">
+            <div class="col-sm-12 col-xs-12 heading-col">
                 <h2>{{ about_head }}</h2>
                 <div class="content-contain">
                     <slot name="about_content"></slot>
                 </div>
             </div>
-            <div class="col-sm-6 col-xs-12 spec-col">
+            <div class="col-md-6 col-sm-12 col-xs-12 spec-col">
                 <h3>{{ skill_list_head }}</h3>
                 <ul class="skills-list">
                     <li v-for="skill in skills">
@@ -46,16 +51,47 @@ const skills = ref([
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-6 col-xs-12 spec-grid">
-
+            <div class="col-md-6 col-sm-12 col-xs-12 fact-slider">
+                <h3>{{ funfact_head }}</h3>
+                <AboutSlider></AboutSlider>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+    .about-content-wrap {
+
+    }
     .about-content-wrap .row {
         max-width: 1024px;
         margin: 0 auto;
+    }
+
+    .heading-col {
+        margin: 2rem 0;
+    }
+
+    .spec-col .skills-list {
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+        list-style-type: none;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .spec-col .skills-list li {
+        flex: 0 0 30%;
+        text-align: center;
+        padding: .5rem 0;
+        margin: 10px 05px;
+        background: var(--color-border);
+        vertical-align: center;
+    }
+
+    .fact-slider {
+        display: flex;
+        flex-flow: column;
     }
 </style>
