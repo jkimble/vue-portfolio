@@ -151,6 +151,10 @@ html {
 #app main.innerpage {
   padding: 0;
 }
+#app main.innerpage .container-fluid.content-wrap {
+  max-width: 1025px;
+  margin: 0 auto;
+}
 h1,
 h2,
 h3,

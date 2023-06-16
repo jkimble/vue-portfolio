@@ -30,4 +30,11 @@ defineProps({
         line-height: 78px;
         font-weight: bold;
     }
+
+    @media (max-width: 767px) {
+      .hero h1 {
+        font-size: 45px;
+        line-height: 60px;
+      }
+    }
 </style>

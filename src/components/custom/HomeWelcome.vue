@@ -42,4 +42,16 @@ defineProps({
 .home__content .button_wrap .textlink_alt {
   margin-top: 2rem;
 }
+
+@media (max-width: 767px) {
+  .home__content h1 {
+    font-size: 45px;
+    line-height: 60px;
+  }
+
+  .home__content .text-contain p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 </style>
