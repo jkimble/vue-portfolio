@@ -13,7 +13,7 @@ const slides = [
 </script>
 
 <template>
-    <Carousel wrap-around="true" autoplay=5000>
+    <Carousel wrapAround="true" autoplay=5000>
       <Slide v-for="slide in slides" :key="slide.id">
         <div class="carousel__item">
           <h3>{{ slide.title }}</h3>

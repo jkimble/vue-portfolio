@@ -5,7 +5,7 @@ import PageHero from '../components/custom/PageHero.vue';
 
 <template>
   <main class="about innerpage">
-    <PageHero hero_heading="About Me" hero_content="Check below to see more about my skills and technologies used." color="fff"></PageHero>
+    <PageHero hero_heading="About Me" hero_content="Check below to see more about my skills and technologies used."></PageHero>
     <div class="content-wrap">
       <AboutContent about_head="Who am I?" skill_list_head="See my professional skills listed below:" funfact_head="Quick facts about me:">
       <template #about_content>

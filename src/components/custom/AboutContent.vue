@@ -60,9 +60,6 @@ const skills = ref([
 </template>
 
 <style scoped>
-    .about-content-wrap {
-
-    }
     .about-content-wrap .row {
         max-width: 1024px;
         margin: 0 auto;
