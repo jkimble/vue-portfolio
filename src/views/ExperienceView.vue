@@ -1,7 +1,7 @@
 <script setup>
   import PageHero from '../components/custom/PageHero.vue'
   import AccordionRow from '../components/custom/AccordionRow.vue'
-  import ReferenceAccordion from '../components/custom/ReferenceAccordion.vue'
+  import ReferenceSlider from '../components/custom/ReferenceSlider.vue'
 </script>
 
 <template>
@@ -110,7 +110,7 @@
         </AccordionRow>
         <div class="ref_row row">
           <div class="col-xs-12">
-            <ReferenceAccordion ref_head="References"></ReferenceAccordion>
+            <ReferenceSlider ref_head="References"></ReferenceSlider>
           </div>
         </div>
       </div>

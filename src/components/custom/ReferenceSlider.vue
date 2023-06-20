@@ -1,7 +1,7 @@
 <script setup>
 import 'vue3-carousel/dist/carousel.css'
-import { defineComponent } from 'vue'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
+
 defineProps({
     ref_head: {
     type: String,
@@ -9,26 +9,6 @@ defineProps({
   }
 })
 
-defineComponent({
-  name: 'Breakpoints',
-  components: {
-    Carousel,
-    Slide,
-    Navigation,
-  },
-  data: () => ({
-    settings: {
-      itemsToShow: 2,
-      itemsToScroll: 2
-    },
-    breakpoints: {
-      1024: {
-        itemsToShow: 1,
-        itemsToScroll: 1
-      },
-    },
-  }),
-})
 
 const slides = [
   { id: '1', r_name: 'Chris Haag', r_title: "Development Team Manager", r_company: "The Karcher Group", r_email: "chaag@tkg.com" },

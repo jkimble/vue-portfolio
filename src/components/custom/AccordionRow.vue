@@ -34,6 +34,7 @@ const is_active = ref(false)
         border-radius: 7px;
         background: var(--color-background-mute);
         margin: 15px 0;
+        transition: .4s;
     }
 
     .accord-row.active,
@@ -41,6 +42,11 @@ const is_active = ref(false)
     .accord-row:focus {
         background: var(--color-background-soft);
         border: 1px solid var(--color-border-hover);
+    }
+
+    .accord-row:hover .accord-head::after,
+    .accord-row:focus .accord-head::after {
+        width: 15rem;
     }
 
     .section_head {
@@ -81,6 +87,12 @@ const is_active = ref(false)
     @media (max-width: 1025px) {
         .accord-row .accord-head {
             font-size: 16px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .accord-row.active .accord-head::after {
+            width: 100%;
         }
     }
 </style>
