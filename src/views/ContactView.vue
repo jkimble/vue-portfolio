@@ -28,7 +28,7 @@
                             my phone number.</p>
                         </template>
                     </SocialTextLinks>
-                    <SocialTextLinks social_link="/Resume_up1.pdf">
+                    <SocialTextLinks social_link="https://jkimble.github.io/vue-portfolio/Resume_up1.pdf">
                         <template #icon>
                             <i class="far fa-file-pdf"></i>
                         </template>
