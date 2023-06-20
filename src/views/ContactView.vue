@@ -1,6 +1,6 @@
 <script setup>
   import PageHero from '../components/custom/PageHero.vue'
-import SocialTextLinks from '../components/custom/SocialTextLinks.vue';
+  import SocialTextLinks from '../components/custom/SocialTextLinks.vue';
 </script>
 
 <template>
@@ -63,7 +63,7 @@ import SocialTextLinks from '../components/custom/SocialTextLinks.vue';
                     </SocialTextLinks>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 infocol center-xs">
-                    <img src="../assets/images/portrait.jpg" loading="lazy" alt="Justin Kimble" class="img-portrait" width="300" />
+                    <img src="../assets/images/portrait.jpg" alt="Justin Kimble" class="img-portrait" width="300" />
                     <h3>Justin Kimble</h3>
                     <h4>Web Developer</h4>
                 </div>
