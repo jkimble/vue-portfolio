@@ -22,7 +22,7 @@ defineProps({
 
 <style scoped>
     .hero {
-        background: var(--color-background-soft);
+        background: var(--color-background-mute);
         padding: 3rem 2rem;
     }
     .hero h1 {
