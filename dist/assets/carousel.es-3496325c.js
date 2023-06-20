@@ -1,4 +1,4 @@
-import{k as p,l as _,e as s,m as h,q as te,s as y,v as ye,x as Ae,y as _e,z as pe,A as K,B as ge,F as Te}from"./index-72deb4b6.js";/**
+import{k as p,l as _,e as s,m as h,q as te,s as y,v as ye,x as Ae,y as _e,z as pe,A as K,B as ge,F as Te}from"./index-5650ca82.js";/**
  * Vue 3 Carousel 0.3.1
  * (c) 2023
  * @license MIT
