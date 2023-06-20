@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 25px;
   line-height: 38px;
   color: var(--color-text);
+  text-decoration: none;
 }
 
 .textlink_alt::after {
@@ -50,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   height: 3px;
   width: 45%;
-  background: var(--portfolio-blue);
+  background: var(--theme-accent-2);
   margin: 5px 0 0;
   transition: 0.4s;
 }
@@ -80,20 +81,26 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal;
 }
 
-.social-wrap .social-content p {
-  color: var(--theme-yellow);
-  transition: 0.4s;
-}
-
-.social-wrap:hover .social-content p,
-.social-wrap:focus .social-content p {
-  color: var(--color-heading);
-}
 
 a {
-  text-decoration: none;
-  color: var(--portfolio-blue);
+  text-decoration: underline;
+  color: var(--color-text);
   transition: 0.4s;
+}
+
+.carousel {
+  button {
+    color: var(--color-heading);
+  }
+  ol.carousel__pagination {
+    padding: 0;
+    .carousel__pagination-button::after {
+      color: var(--theme-accent-2);
+    }
+  }
+  .carousel__item {
+    padding: 0 .5rem;
+  }
 }
 
 @media (hover: hover) {
@@ -103,7 +110,7 @@ a {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   body {
     display: flex;
     align-items: flex-start;
@@ -113,5 +120,15 @@ a {
     display: flex;
     flex-flow: column;
     padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    .carousel__next,
+    .carousel__prev {
+      bottom: 0;
+      top: revert;
+    }
   }
 }

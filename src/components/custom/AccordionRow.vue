@@ -40,7 +40,7 @@ const is_active = ref(false)
     .accord-row.active,
     .accord-row:hover,
     .accord-row:focus {
-        background: var(--color-background-soft);
+        background: var(--portfolio-accent-2-highlight);
         border: 1px solid var(--color-border-hover);
     }
 
@@ -64,7 +64,7 @@ const is_active = ref(false)
     .accord-head::after {
         content: '';
         height: 2px;
-        background: var(--color-border);
+        background: var(--theme-accent-2);
         display: block;
         position: absolute;
         width: 5rem;
@@ -72,8 +72,6 @@ const is_active = ref(false)
         top: 10px;
         position: relative;
         transition: 0.4s;
-    }
-    .accord-row.active .accord-head {
     }
 
     .accord-row.active .accord-head::after {

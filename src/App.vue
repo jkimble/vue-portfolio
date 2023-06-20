@@ -85,7 +85,7 @@ header {
   line-height: 1.5;
   max-height: 100vh;
   padding: 1.5rem 2rem;
-  background:var(--theme-lightgray);
+  background:var(--color-background);
   box-shadow: 0 3px 6px #0d0d1d42;
   z-index: 10;
 }
@@ -146,7 +146,7 @@ footer {
 }
 
 .textlogo {
-  color: var(--color-text-header);
+  color: var(--color-heading);
   font-size: 30px;
   letter-spacing: 4.06px;
   text-transform: uppercase;
@@ -166,12 +166,22 @@ nav {
   text-align: center;
 }
 
+nav a {
+  color: var(--color-heading);
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--portfolio-white);
+}
+
 nav a.router-link-exact-active {
-  color: var(--color-text-header);
+  color: var(--portfolio-white);
+  background-color: var(--portfolio-blue);
 }
 
 nav a.router-link-exact-active:hover {
-  background-color: transparent;
+
 }
 
 nav a {
@@ -179,6 +189,7 @@ nav a {
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
   font-weight: bold;
+  text-decoration: none;
 }
 
 nav a:first-of-type {
@@ -198,7 +209,7 @@ nav a:first-of-type {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   header {
     display: flex;
     flex-flow: row;
@@ -208,7 +219,7 @@ nav a:first-of-type {
   }
 
   header .header_wrap {
-    max-width: 1024px;
+    max-width: 1025px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -239,6 +250,12 @@ nav a:first-of-type {
 @media (max-width: 1025px) {
   .side__social {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  nav a {
+    padding: 0 .5rem;
   }
 }
 </style>

@@ -24,8 +24,8 @@
                             Contact me today
                         </template>
                         <template #content>
-                            This is the quickest way to contact me. Email me to request
-                            my phone number.
+                            <p>This is the quickest way to contact me. Email me to request
+                            my phone number.</p>
                         </template>
                     </SocialTextLinks>
                     <SocialTextLinks social_link="/Resume_up1.pdf">
@@ -36,7 +36,7 @@
                             View my resume
                         </template>
                         <template #content>
-                            View/download my resume here.
+                            <p>View/download my resume here.</p>
                         </template>
                     </SocialTextLinks>
                     <SocialTextLinks social_link="https://github.com/jkimble">
@@ -44,10 +44,21 @@
                             <i class="fa-brands fa-github"></i>
                         </template>
                         <template #heading>
-                            GitHub
+                            Personal GitHub
                         </template>
                         <template #content>
-                            View my (public) personal GitHub.
+                            <p>View my (public) personal GitHub.</p>
+                        </template>
+                    </SocialTextLinks>
+                    <SocialTextLinks social_link="https://github.com/jkimb">
+                        <template #icon>
+                            <i class="fab fa-github-square"></i>
+                        </template>
+                        <template #heading>
+                            Professional GitHub
+                        </template>
+                        <template #content>
+                            <p>View my professional GitHub.</p>
                         </template>
                     </SocialTextLinks>
                     <SocialTextLinks social_link="https://www.linkedin.com/in/justin-kimble-890429180/">
@@ -58,7 +69,7 @@
                             LinkedIn Profile
                         </template>
                         <template #content>
-                            View my LinkedIn profile &amp; message me!
+                            <p>View my LinkedIn profile &amp; message me!</p>
                         </template>
                     </SocialTextLinks>
                 </div>
@@ -82,16 +93,22 @@
         padding: 1.5rem 0;
     }
 
+    .contact-wrap {
+        justify-content: center;
+    }
+
     @media (max-width: 1025px) {
         .linkcol {
             order: 3;
+            margin-top: 1rem;
         }
         .contact-intro {
-            order: 2;
+            order: 1;
             padding: 1rem;
+            max-width: 600px;
         }
         .infocol {
-            order: 1;
+            order: 2;
             padding-top: 1rem;
         }
     }

@@ -42,7 +42,7 @@
           <template #accordion_content>
             <div class="para_wrap">
               <h4>Sector:</h4>
-              <p><i>Marketing Agency</i></p>
+              <p><i>Marketing</i></p>
             </div>
             <div class="para_wrap">
               <h4>Duration:</h4>
@@ -65,11 +65,11 @@
           <template #accordion_content>
             <div class="para_wrap">
               <h4>Sector:</h4>
-              <p><i>Marketing Agency</i></p>
+              <p><i>Marketing</i></p>
             </div>
             <div class="para_wrap">
               <h4>Duration:</h4>
-              <p>April 2021 - June 2023</p>
+              <p>October 2020 - April 2021</p>
             </div>
             <div class="para_wrap">
               <h4>Accomplishments:</h4>
@@ -104,7 +104,7 @@
                 <li>Recieved multiple appointment requests within the first month of site launch.</li>
                 <li>Recieved organic traffic and high search placement.</li>
               </ul>
-              <RouterLink to="about" class="textlink_alt">See more here</RouterLink>
+              <RouterLink to="contact" class="textlink_alt">Learn more</RouterLink>
             </div>
           </template>
         </AccordionRow>
@@ -118,6 +118,11 @@
 </template>
   
 <style scoped>
-
+  h4 {
+    margin: 0;
+  }
+  .para_wrap:not(:first-child) {
+    margin: 1rem 0;
+  }
 </style>
   

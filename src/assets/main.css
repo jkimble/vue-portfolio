@@ -173,13 +173,14 @@ h6 {
   font-size: 25px;
   line-height: 38px;
   color: var(--color-text);
+  text-decoration: none;
 }
 .textlink_alt::after {
   content: '';
   display: block;
   height: 3px;
   width: 45%;
-  background: var(--portfolio-blue);
+  background: var(--theme-accent-2);
   margin: 5px 0 0;
   transition: 0.4s;
 }
@@ -202,18 +203,22 @@ h6 {
   font-size: 30px;
   font-style: normal;
 }
-.social-wrap .social-content p {
-  color: var(--theme-yellow);
+a {
+  text-decoration: underline;
+  color: var(--color-text);
   transition: 0.4s;
 }
-.social-wrap:hover .social-content p,
-.social-wrap:focus .social-content p {
+.carousel button {
   color: var(--color-heading);
 }
-a {
-  text-decoration: none;
-  color: var(--portfolio-blue);
-  transition: 0.4s;
+.carousel ol.carousel__pagination {
+  padding: 0;
+}
+.carousel ol.carousel__pagination .carousel__pagination-button::after {
+  color: var(--theme-accent-2);
+}
+.carousel .carousel__item {
+  padding: 0 0.5rem;
 }
 @media (hover: hover) {
   a:hover {
@@ -221,7 +226,7 @@ a {
     color: var(--portfolio-white);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   body {
     display: flex;
     align-items: flex-start;
@@ -230,5 +235,12 @@ a {
     display: flex;
     flex-flow: column;
     padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .carousel .carousel__next,
+  .carousel .carousel__prev {
+    bottom: 0;
+    top: revert;
   }
 }
