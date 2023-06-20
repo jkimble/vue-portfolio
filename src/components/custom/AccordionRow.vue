@@ -12,7 +12,7 @@ const is_active = ref(false)
 </script>
 
 <template>
-    <h2 v-if="this.$slots.option_heading" class="section_head">
+    <h2 v-if="$slots.option_heading" class="section_head">
         <slot name="option_heading"></slot>
     </h2>
     <div class="row accord-row" :class="{ active: is_active }" @click="$click => is_active = !is_active" onclick role="presentation" :aria-expanded="{ active: is_active }">
