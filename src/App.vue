@@ -13,7 +13,7 @@ import SocialSidebar from './components/custom/SocialSidebar.vue';
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/experience">Experience</RouterLink>
-          <RouterLink to="/">Clients</RouterLink>
+          <RouterLink to="/contact">Contact</RouterLink>
         </nav>
       </div>
     </div>
