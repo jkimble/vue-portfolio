@@ -61,7 +61,7 @@ const skills = ref([
 
 <style scoped>
     .about-content-wrap .row {
-        max-width: 1024px;
+        max-width: 1025px;
         margin: 0 auto;
     }
 
@@ -90,5 +90,26 @@ const skills = ref([
     .fact-slider {
         display: flex;
         flex-flow: column;
+    }
+
+    @media (max-width: 768px) {
+        .spec-col .skills-list {
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .spec-col .skills-list li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 500px) { 
+        .spec-col .skills-list li {
+            flex: 0 0 28%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 </style>
