@@ -11,7 +11,7 @@ defineProps({
 
 
 const slides = [
-  { id: '1', r_name: 'Chris Haag', r_title: "Development Team Manager", r_company: "The Karcher Group", r_email: "chaag@tkg.com" },
+  { id: '1', r_name: 'Chris Haag', r_title: "Director of Development", r_company: "The Karcher Group", r_email: "chaag@tkg.com" },
   { id: '2', r_name: 'Dr. Julian Woods, DDS', r_title: "General Dentist", r_company: "Landover Dental Associates", r_email: "jawoods9041@gmail.com" },
   { id: '3', r_name: 'Darla Brown', r_title: "VP of Digital Services", r_company: "The Karcher Group", r_email: "dbrown@tkg.com" },
 ]
